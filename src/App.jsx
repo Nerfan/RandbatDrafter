@@ -52,6 +52,7 @@ const getRandomSet = (data, selectedName) => {
     if ( !mon ) {
         return null;
     }
+    const level = mon.level;
     const roles = mon.roles;
     const setRoll = Math.random();
     let totalWeight = 0;
@@ -94,6 +95,7 @@ const getRandomSet = (data, selectedName) => {
 
     return {
         name: roleName,
+        level,
         ability,
         item,
         tera,
@@ -139,6 +141,7 @@ function App() {
             </div>
             {calculatedSet && <div className="card">
                 <div>Set Name: {calculatedSet.name}</div>
+                <div>Level: {calculatedSet.level}</div>
                 <div>Ability: {calculatedSet.ability}</div>
                 <div>Item: {calculatedSet.item}</div>
                 <div>Tera Type: {calculatedSet.tera}</div>
