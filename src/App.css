@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+
+.poke-paste {
+  font-family: monospace;
+  text-align: left;
+  width: max-content;
+  margin: 0 auto;
+  div {
+      width: max-content;
+  }
+}

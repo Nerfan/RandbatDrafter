@@ -140,6 +140,7 @@ function App() {
                 </button>
             </div>
             {calculatedSet && <div className="card">
+                {/*
                 <div>Set Name: {calculatedSet.name}</div>
                 <div>Level: {calculatedSet.level}</div>
                 <div>Ability: {calculatedSet.ability}</div>
@@ -149,6 +150,33 @@ function App() {
                 <div>IVs: {calculatedSet.ivs.hp}/{calculatedSet.ivs.atk}/{calculatedSet.ivs.def}/{calculatedSet.ivs.spa}/{calculatedSet.ivs.spd}/{calculatedSet.ivs.spe}</div>
                 <div>Moves:</div>
                 {calculatedSet.moves.map((move) => <div key={move}>{move}</div>)}
+                */}
+                <div>Set Name: {calculatedSet.name}</div>
+                <div className="poke-paste">
+                    <div>{`${selected} @ ${calculatedSet.item}`}</div>
+                    <div>{`Ability: ${calculatedSet.ability}`}</div>
+                    <div>{`Tera Type: ${calculatedSet.tera}`}</div>
+                    <div>
+                        {`EVs: `}
+                        {`${calculatedSet.evs.hp} HP / `}
+                        {`${calculatedSet.evs.atk} Atk / `}
+                        {`${calculatedSet.evs.def} Def / `}
+                        {`${calculatedSet.evs.spa} SpA / `}
+                        {`${calculatedSet.evs.spd} SpD / `}
+                        {`${calculatedSet.evs.spe} Spe`}
+                    </div>
+                    <div>{`Serious Nature`}</div>
+                    <div>
+                        {`IVs: `}
+                        {`${calculatedSet.ivs.hp} HP / `}
+                        {`${calculatedSet.ivs.atk} Atk / `}
+                        {`${calculatedSet.ivs.def} Def / `}
+                        {`${calculatedSet.ivs.spa} SpA / `}
+                        {`${calculatedSet.ivs.spd} SpD / `}
+                        {`${calculatedSet.ivs.spe} Spe`}
+                    </div>
+                    <div>{calculatedSet.moves.map((move) => <div>{`- ${move}`}</div>)}</div>
+                </div>
             </div>}
         </>
     )
