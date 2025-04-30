@@ -155,6 +155,7 @@ function App() {
                 <div className="poke-paste">
                     <div>{`${selected} @ ${calculatedSet.item}`}</div>
                     <div>{`Ability: ${calculatedSet.ability}`}</div>
+                    <div>{`Level: ${calculatedSet.level}`}</div>
                     <div>{`Tera Type: ${calculatedSet.tera}`}</div>
                     <div>
                         {`EVs: `}
